@@ -1,0 +1,186 @@
+/* Apply dark theme */
+body {
+  background-color: #121212;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 20px; /* Reduced padding for better alignment */
+  background: rgba(30, 30, 30, 0.9);
+  backdrop-filter: blur(15px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  -webkit-background-clip: text;
+  color: transparent;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Adjusted gap for better spacing */
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+/* Active & Hover Effects */
+.nav-links li a:hover,
+.nav-links li a.active {
+  background: rgba(255, 152, 0, 0.2);
+  color: #ff9800;
+}
+
+/* Section Styling */
+section {
+  padding: 100px 20px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Main Content */
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 100px; /* Adjusted for navbar */
+}
+
+/* Title */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* File Upload */
+.upload-box input {
+  padding: 10px;
+  border: 2px solid #444;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: white;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Media Preview */
+.media-preview {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  background: #000;
+}
+
+/* Video and Image */
+.media {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Detect Button */
+.detect-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.detect-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Results */
+.result {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.real {
+  background: #00c853;
+  color: black;
+}
+
+.fake {
+  background: #d50000;
+  color: white;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
